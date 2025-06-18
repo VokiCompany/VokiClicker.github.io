@@ -1,0 +1,394 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0A0A0A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background-color: #0f0f0f;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    position: relative;
+    color: white;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-info {
+    text-align: left;
+}
+
+.level {
+    font-size: 12px;
+    color: #888;
+}
+
+.income {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.profile-controls {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.profile-controls button {
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    margin: 2px 0;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.profile-controls button:hover {
+    background-color: #0b7dda;
+}
+
+#username-input {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.rewards {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.reward {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 30px;
+    width: auto;
+    min-width: 200px;
+}
+
+.reward-title {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.reward-timer {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.game-area {
+    position: relative;
+    display: inline-block;
+    margin: 20px 0;
+}
+
+#hamster {
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    object-fit: cover;
+}
+
+#hamster:active {
+    transform: scale(0.7);
+}
+
+.score-board {
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: -40px;
+}
+
+.coin-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+.energy-boost {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.energy {
+    font-size: 14px;
+    color: #555;
+    margin-right: 10px;
+}
+
+.boost-button {
+    background-color: #ff5722;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.boost-button:hover {
+    background-color: #e64a19;
+}
+
+.floating-score {
+    position: absolute;
+    pointer-events: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    animation: floatUp 1s ease-out forwards;
+    z-index: 100;
+}
+
+@keyframes floatUp {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+}
+
+.shop {
+    position: relative;
+    margin-top: 20px;
+}
+
+.shop-title {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #2196F3;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.shop-title:hover {
+    background-color: #0b7dda;
+}
+
+.skins-container {
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.shop:hover .skins-container {
+    display: block;
+}
+
+.skin-item {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+.skin-item:hover {
+    background-color: #f5f5f5;
+}
+
+.skin-preview {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.skin-info {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.skin-name {
+    font-weight: bold;
+}
+
+.skin-price {
+    color: #888;
+    font-size: 0.9em;
+}
+
+.skin-desc {
+    font-size: 0.8em;
+    color: #666;
+    margin-top: 3px;
+}
+
+.skin-status {
+    font-size: 0.8em;
+    margin-top: 3px;
+    font-weight: bold;
+}
+
+.skin-status[data-active="true"] {
+    color: #4CAF50;
+}
+
+.skin-status[data-active="false"] {
+    color: #f44336;
+}
+
+.skin-level {
+    font-size: 0.8em;
+    color: #2196F3;
+    margin-top: 3px;
+    font-weight: bold;
+}
+
+.buy-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.buy-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.buy-button:hover:not(:disabled) {
+    background-color: #45a049;
+}
+
+.promo-code {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.promo-code input {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+.promo-code button {
+    padding: 8px 12px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.click-challenge {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.progress-bar-container {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.progress-text {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #555;
+    text-align: center;
+}
+
+.progress-bar {
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #4CAF50, #8BC34A);
+    width: 0%;
+    transition: width 0.3s ease;
+    border-radius: 10px;
+}
+
+.reward-notification {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1000;
+    animation: fadeInOut 2s ease-in-out;
+    display: none;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BonziClicker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="profile">
+                <img src="https://i.pinimg.com/originals/51/16/44/5116442742038d248771b0fe0962ac3c.png" alt="Avatar" class="avatar">
+                <div class="user-info">
+                    <h2>BonziClicker</h2>
+                </div>
+                <div class="profile-controls">
+                    <button id="change-avatar-btn">Сменить аватар</button>
+                    <button id="change-username-btn">Сменить ник</button>
+                </div>
+            </div>
+            <div class="income">
+            </div>
+        </div>
+        <input type="file" id="avatar-upload" accept="image/*" style="display: none;">
+        <input type="text" id="username-input" style="display: none;">
+
+        <div class="rewards">
+            <div class="reward">
+                <div class="reward-title">Ежедневный шифр</div>
+                <div class="reward-timer" id="daily-code-timer">07:30</div>
+            </div>
+        </div>
+        Инструкция: чтобы вывести инструкцию в коде введите инструкция
+        <p></p>
+        <div class="game-area">
+            <div class="score-board">
+                <img src="img/hamster.jpg" alt="Coin" class="coin-icon">
+                <span id="score">0</span>
+            </div>
+            <div class="click-challenge">
+                <div class="progress-bar-container">
+                    <div class="progress-text">Прогресс: <span id="current-clicks">0/100</span></div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+            <img src="img/hamster.jpg" id="hamster" alt="Hamster" class="hamster-img">
+        </div>
+        <div class="energy-boost">
+            <div class="energy">
+                Энергия: <span id="energy">3000/3000</span>
+            </div>
+            <div class="Буст">
+                <button class="boost-button">Boost</button>
+            </div>
+        </div>
+        <div class="promo-code">
+            <input type="text" id="promo-input" placeholder="Введите код">
+            <button id="promo-button">Активировать</button>
+        </div>
+        <div class="shop">
+            <div class="shop-title">Магазин</div>
+            <div class="skins-container" id="skins-list">
+                <!-- Скины будут добавлены через JS -->
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
