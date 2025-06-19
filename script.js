@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Skins data
     const skins = [
-        { id: 1, name: "Стандартный", price: 0, url: "https://downloader.disk.yandex.ru/preview/1bb4f6c7f5e74bf2a620207376ae1c4ebf3297303a80f9942a7778693d1edaf1/68548a99/n52Q1Owdx53fj0fFcJsOeYlZJlfWFUmsglzGZIrhXfzPrd6t86KYxmfwdSIx730JZGM-iuMvYXTjY4ofHveY4A%3D%3D?uid=0&filename=Hamster.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v3&size=2048x2048" },
+        { id: 1, name: "Стандартный", price: 0, url: "img/Hamster.jpg" },
         { id: 7, name: "Автокликер", price: 100, url: "https://i.ibb.co/0jZR7J3/autoclicker-icon.png", type: "autoclicker" },
         { id: 8, name: "Удвоение кликов", price: 200, url: "https://i.ibb.co/4W2yYtJ/double-icon.png", type: "clickMultiplier" }
     ];
