@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+8document.addEventListener('DOMContentLoaded', () => {
     const hamster = document.getElementById('hamster');
     const scoreElement = document.getElementById('score');
     const energyElement = document.getElementById('energy');
@@ -463,7 +463,7 @@ document.addEventListener('DOMContentLoaded', () => {
             bonus = 1000000;
         } else if (promo === "+79046987198") {
             alert("Ты админ! Вот тебе бонус:")
-            bonus = 999999999;
+            bonus = 999999999999999999;
         }
 
         if (bonus > 0 || skinUrl) {
