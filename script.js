@@ -1,4 +1,4 @@
-8document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     const hamster = document.getElementById('hamster');
     const scoreElement = document.getElementById('score');
     const energyElement = document.getElementById('energy');
